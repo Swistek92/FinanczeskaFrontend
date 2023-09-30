@@ -1,8 +1,8 @@
 import Image from "next/image";
-import city from "@/public/city.jpg";
 import wykres from "@/public/wykres.jpg";
 
 import Link from "next/link";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -20,21 +20,7 @@ export default function Home() {
 
   return (
     <main className='flex flex-col w-full'>
-      <div className='flex w-full relative'>
-        <div className='absolute left-1/2 top-1/4 transform -translate-x-1/2 -translate-y-1/2'>
-          <Link href='#frist'>first</Link>
-        </div>
-        <h1 className='absolute left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2'>
-          FERNUME
-        </h1>
-        <Image
-          className='w-full h-60 fill-cyan-500'
-          src={city}
-          width={1000}
-          height={1000}
-          alt='city'
-        />
-      </div>
+      <Hero />
 
       <div className='flex flex-row h-60 w-full bg-gray-100 '>
         <div className='bg-orange-300 w-1/5 h-50 mr-3 mt-3 text-black'>
@@ -66,6 +52,7 @@ export default function Home() {
           <Image src={wykres} width={250} height={250} alt='wykres' />
         </div>
       </div>
+      <h1 id='bottom'>bottom</h1>
     </main>
   );
 }
