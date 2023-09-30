@@ -2,7 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import city from "@/public/city.jpg";
+import city from "@/public/city.jpeg";
+import { BagIcon } from "./icons/BagIcon";
+import { DolarIcon } from "./icons/DolarIcon";
+import { FinanceIcon } from "./icons/FinanceIcon";
 
 const Hero = () => {
   const handleScroll = () => {
@@ -15,6 +18,11 @@ const Hero = () => {
 
   return (
     <div className='flex w-full relative'>
+      <div className='absolute left-1/2 top-8 transform -translate-x-1/2 -translate-y-1/2 flex flex-row'>
+        <BagIcon className='m-2' />
+        <DolarIcon className='m-2' />
+        <FinanceIcon className='m-2' />
+      </div>
       <div className='absolute left-1/2 top-1/4 transform -translate-x-1/2 -translate-y-1/2'>
         <button onClick={handleScroll}>scroll bottom</button>
       </div>
