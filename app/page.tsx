@@ -7,12 +7,9 @@ export default function Home() {
   return (
     <main className='flex flex-col w-full'>
       <Hero />
-
       <Chat />
-
       <Component1 />
       <Component2 />
-
       <p className='opacity-0' id='bottom'>
         bottom
       </p>
