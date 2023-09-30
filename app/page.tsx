@@ -11,7 +11,7 @@ export default function Home() {
           FERNUME
         </h1>
         <Image
-          className='-hue-rotate-100'
+          className='-hue-rotate-100 w-full h-60'
           src={city}
           width={1000}
           height={1000}
