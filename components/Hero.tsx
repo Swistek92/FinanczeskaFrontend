@@ -30,7 +30,7 @@ const Hero = () => {
         FERNUME
       </h1>
       <Image
-        className='w-full h-60 fill-cyan-500'
+        className='w-full h-60 fill-cyan-500 brightness-50'
         src={city}
         width={1000}
         height={1000}
