@@ -5,19 +5,6 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 
 export default function Home() {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
-    e.preventDefault();
-    // get the href and remove everything before the hash (#)
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
-    const elem = document.getElementById("first");
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
     <main className='flex flex-col w-full'>
       <Hero />

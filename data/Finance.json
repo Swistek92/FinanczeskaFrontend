@@ -1,0 +1,104 @@
+
+{} Tax depends on annual salary:
+{
+    "IncomeTax": {
+        "UpTo120000": {
+            "Rate": 0.12,
+            "DecreasingAmount": 3600,
+            "TaxFreeAmount": 30000
+        },
+        "Over120000": {
+            "BaseTax": 10800,
+            "Rate": 0.32,
+            "Threshold": 120000
+        },
+        "BusinessActivity": {
+            "Options": [
+                {
+                    "Type": "FlatRate",
+                    "Rate": 0.19
+                },
+                {
+                    "Type": "LumpSumTax"
+                },
+                {
+                    "Type": "TaxCard",
+                    "Status": "Liquidated",
+                    "Note": "Tax card was liquidated as of 1 January 2022 and is only available to those who used it in 2021."
+                }
+            ]
+        },
+        "CapitalGains": {
+            "Rate": 0.19,
+            "TaxFreeAmount": 0
+        },
+        "RentalIncome": {
+            "Below100000": {
+                "Rate": 0.085
+            },
+            "Over100000": {
+                "Rate": 0.125
+            },
+            "NoCostDeduction": true
+        },
+        "SpecialRulesForNonResidents": {
+            "Rate": 0.20,
+            "CostDeduction": false,
+            "Earnings": [
+                "Revenue from copyrights and other IP",
+                "Income from transfer of technology and know-how",
+                "Remuneration for leasing equipment",
+                "Income from independent work in art, literature, etc.",
+                "Income from work commissioned by authorities",
+                "Income as fees for membership in boards",
+                "Income from personal services not offered to the public",
+                "Income from activities under management contracts"
+            ],
+            "Note": "These rates can vary based on double tax treaties."
+        }
+    },
+}
+
+2. When a business is eligible for a VAT refund:
+2ю {
+    "VATRefund": {
+        "Eligibility": {
+            "Location": "Member State of the European Union",
+            "AuthorisedEntities": [
+                "natural persons",
+                "legal persons",
+                "organisational units without legal personality"
+            ],
+            "Conditions": {
+                "NoBusinessPresenceInPoland": [
+                    "a place of business",
+                    "a place of establishment from which business transactions were carried out",
+                    "a permanent place of residence or ordinary place of stay"
+                ]
+            }
+        },
+        "RefundConditions": {
+            "RegisteredVATTaxpayer": "Article 2(11) of the Value Added Tax Act",
+            "NoSalesInPoland": {
+                "Description": "Article 2(22) of the aforementioned Act",
+                "Exceptions": [
+                    "transport services and auxiliary services relating directly to the import of goods",
+                    "air traffic control services for international air carriers",
+                    "services relating to take-off, landing, parking, handling of passengers and cargo for international air carriers",
+                    "services in maritime ports for maritime transport",
+                    "services in maritime ports for international land and inland waterway transport",
+                    "marine salvage services, safety of maritime shipping, marine environment protection, maintenance of port water areas and approach lanes",
+                    "services for operation of vessels under Article 83 (1) point 1 of the Act",
+                    "services for renovation, reconstruction or maintenance of vessels under Article 83 (1) point 1 of the Act",
+                    "services for repair, conversion, maintenance of air transport equipment for international air carriers",
+                    "other services for shipowners or entities providing transport by maritime transport",
+                    "supply of services and goods where taxpayer is the buyer under Article 17 of the Act",
+                    "services to non-taxable persons under Article 28a of the Act",
+                    "intra-community distance sales of goods",
+                    "supplies of goods by taxable persons facilitating such supplies",
+                    "distance sales of imported goods"
+                ]
+            }
+        }
+    }
+}
