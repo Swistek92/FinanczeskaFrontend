@@ -18,13 +18,13 @@ const Login = () => {
 
   if (apiKey === "") {
     return (
-      <div className='  bg-gray-200 '>
+      <div className='  bg-orange-400 '>
         <form onSubmit={handleSubmit} className='flex flex-col text-black pt-1'>
           <label htmlFor='login' className='w-full flex justify-center  '>
             login
           </label>
           <input
-            className='w-full  flex justify-center '
+            className='w-full  flex justify-center bg-orange-200 '
             onChange={(e) => setLogin(e.target.value)}
             value={login}
             id='login'
@@ -36,7 +36,7 @@ const Login = () => {
             password
           </label>
           <input
-            className='w-full '
+            className='w-full   bg-orange-200'
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             id='password'

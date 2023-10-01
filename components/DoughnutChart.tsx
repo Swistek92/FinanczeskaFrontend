@@ -29,4 +29,6 @@ const data = {
     },
   ],
 };
-export const DoughnutChart = () => <Doughnut className='' data={data} />;
+const DoughnutChart = () => <Doughnut className='' data={data} />;
+
+export default DoughnutChart;

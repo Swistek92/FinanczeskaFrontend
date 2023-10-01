@@ -26,7 +26,7 @@ const Chat = () => {
     if (inputValue && inputValue.trim() !== "") {
       setAnswers((prevAnswers) => [
         ...prevAnswers,
-        { question: inputValue, answer: lorem.generateSentences(2) },
+        { question: inputValue, answer: lorem.generateSentences(4) },
       ]);
 
       setInputValue("");
@@ -43,15 +43,15 @@ const Chat = () => {
       element.scrollIntoView({
         behavior: "smooth",
         block: "center",
-        inline: "end",
+        inline: "center",
       });
     }
   };
 
   return (
-    <div className='w-full bg-gray-100 text-black'>
+    <div className='w-full bg-gray-200 text-black'>
       {answers.length > 0 && (
-        <div className='flex flex-col max-h-40 overflow-scroll m-4'>
+        <div className='flex flex-col max-h-60 overflow-scroll m-4'>
           {answers.length > 0 &&
             answers.map((e, i) => (
               <div className='flex flex-col p-2 border-b'>
@@ -74,7 +74,7 @@ const Chat = () => {
         onSubmit={handleSubmit}
       >
         <input
-          className='w-3/4 m-1 p-1 text-slate-700  rounded-sm border border-slate-300 outline-none'
+          className='w-3/4 m-1 p-1 text-slate-700 bg-gray-100 rounded-sm border border-slate-300 outline-none'
           type='text'
           value={inputValue}
           onChange={handleInputChange}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn-primary {
-  @apply bg-blue-500  text-white   px-4 py-2 rounded-lg;
+  @apply bg-gray-900  text-white   px-4 py-2 rounded-lg;
 }
 
 .btn-primary:hover {

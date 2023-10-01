@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import wykres from "@/public/wykres.jpg";
-import { DoughnutChart } from "./DoughnutChart";
+import { DoughnutChart } from ".";
 
 const Component2 = () => {
   return (
