@@ -5,7 +5,7 @@ import { Doughnut } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const data = {
-  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+  labels: ["zyski", "zyski", "zyski", "zyski", "zyski", "zyski"],
   datasets: [
     {
       data: [12, 19, 3, 5, 2, 3],
