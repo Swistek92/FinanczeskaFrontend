@@ -2,20 +2,31 @@
 import { answersType, changeInputType, submitFormType } from "@/types";
 import { useEffect, useState } from "react";
 import React from "react";
+import { LoremIpsum } from "lorem-ipsum";
 
 const Chat = () => {
   const [inputValue, setInputValue] = useState<string | undefined>();
-
   const [answers, setAnswers] = useState<answersType>([]);
   const handleInputChange = (e: changeInputType) =>
     setInputValue(e.target.value);
+
+  const lorem = new LoremIpsum({
+    sentencesPerParagraph: {
+      max: 5,
+      min: 3,
+    },
+    wordsPerSentence: {
+      max: 5,
+      min: 2,
+    },
+  });
 
   const handleSubmit = (e: submitFormType) => {
     e.preventDefault();
     if (inputValue && inputValue.trim() !== "") {
       setAnswers((prevAnswers) => [
         ...prevAnswers,
-        { question: inputValue, answer: "random ANSWER from backend@@" },
+        { question: inputValue, answer: lorem.generateSentences(2) },
       ]);
 
       setInputValue("");
@@ -57,6 +68,7 @@ const Chat = () => {
             ))}
         </div>
       )}
+
       <form
         className='flex flex-row border border-spacing-80'
         onSubmit={handleSubmit}
@@ -67,11 +79,7 @@ const Chat = () => {
           value={inputValue}
           onChange={handleInputChange}
         />
-        <button
-          disabled={inputValue && inputValue.length < 0 ? true : false}
-          className='btn-primary w-1/4'
-          type='submit'
-        >
+        <button className='btn-primary w-1/4' type='submit'>
           ask
         </button>
       </form>
