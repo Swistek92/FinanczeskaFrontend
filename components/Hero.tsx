@@ -27,7 +27,7 @@ const Hero = () => {
         {/* <button onClick={handleScroll}>scroll bottom</button> */}
       </div>
       <h1 className='select-none absolute left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2 text-3xl'>
-        Finus AI
+        FinuśAI
       </h1>
       <Image
         className='w-full h-60 '
