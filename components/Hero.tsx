@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <div className='flex w-full relative'>
+    <div className='flex w-full relative text-white'>
       <div className='absolute left-1/2 top-8 transform -translate-x-1/2 -translate-y-1/2 flex flex-row'>
         <BagIcon className='m-2' />
         <DolarIcon className='m-2' />
@@ -30,7 +30,7 @@ const Hero = () => {
         FERNUME
       </h1>
       <Image
-        className='w-full h-60 fill-cyan-500 brightness-50'
+        className='w-full h-60 '
         src={city}
         width={1000}
         height={1000}
