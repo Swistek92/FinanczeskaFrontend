@@ -18,13 +18,13 @@ const Login = () => {
 
   if (apiKey === "") {
     return (
-      <div className='flex flex-col  bg-gray-200 md:flex-row'>
-        <form onSubmit={handleSubmit} className='text-black pt-1'>
-          <label htmlFor='login' className='p-1  w-full md:w-1/4 '>
+      <div className='  bg-gray-200 '>
+        <form onSubmit={handleSubmit} className='flex flex-col text-black pt-1'>
+          <label htmlFor='login' className='w-full flex justify-center  '>
             login
           </label>
           <input
-            className='w-full md:w-1/4 '
+            className='w-full  flex justify-center '
             onChange={(e) => setLogin(e.target.value)}
             value={login}
             id='login'
@@ -32,11 +32,11 @@ const Login = () => {
             autoComplete='off'
             required
           />
-          <label htmlFor='password' className='p-1 w-full md:w-1/4 '>
+          <label htmlFor='password' className='p-1 w-full flex justify-center '>
             password
           </label>
           <input
-            className='w-full md:w-1/4 '
+            className='w-full '
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             id='password'
