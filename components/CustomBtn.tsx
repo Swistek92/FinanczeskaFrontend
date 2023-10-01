@@ -15,7 +15,7 @@ const CustomBtn = () => {
               onClick={() => setState("asd")}
               className='w-36 h-36 rounded-full bg-orange-500  border-8 border-orange-600 flex items-center justify-center '
             >
-              Wanna talk?
+              hey finuś?
             </button>
           </div>
         </div>

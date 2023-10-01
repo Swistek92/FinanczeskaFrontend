@@ -23,6 +23,9 @@ const Chat = () => {
 
   const handleSubmit = (e: submitFormType) => {
     e.preventDefault();
+
+
+    
     if (inputValue && inputValue.trim() !== "") {
       setAnswers((prevAnswers) => [
         ...prevAnswers,
